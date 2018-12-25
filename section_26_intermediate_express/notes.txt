@@ -1,0 +1,80 @@
+be sure not to name project the same as a package
+cause name collision
+
+rendering html and templates
+few different types of templates besides ejs
+
+can pass html into res.send but it's not ideal
+use res.render with an ejs file, not html
+let's us embed variables into html
+
+<%= js code %>
+could do 5 + 5
+variable.toUpperCase();
+
+pass variablename to res.render
+
+use ejs file
+need views folder
+use <%= variable %>
+in add.js use res.render and pass in ejs file, then pass object
+{variableNameInEJS:variableInAppJS}
+
+
+EJS Control flow
+loop through all posts, make entry div
+
+two different types of tags in ejs
+<%= %> - value added to html
+<% %> - logic, control, if statements - nothing is added to html
+
+styles and partials
+
+use external style sheet
+need to put into public folder
+don't need to use public in url
+need to tell express to share public folder in app.js
+app.use(express.static("public"));
+
+you don't have to specify .ejs
+put this at top of file
+app.set("view engine", "ejs); 
+
+what to do with html boilerplate?
+don't have to do on every template
+you can use partials
+top half of html in one
+bottom half in another
+create partials folder in views
+
+mkdir views/partials && cd "$_"
+
+<% include header %>
+
+css in partial include / to begin. /app.css
+adding a slash makes it look for app.css from root directory
+
+post requests
+
+create app directory
+npm init
+npm install express --save
+npm install ejs --save
+touch app.js / index.js
+
+in app:
+require express
+set view engine to ejs
+add app.listen(process.env.PORT, process.env.IP, function(){
+console.log("server has started"); });
+set root get
+
+!! install c9 globally
+npm install -g c9
+
+post routes
+app.post("/addfriend", function(req, res) {
+
+})
+
+need body-parser to take values from input and make it accessible in app.js

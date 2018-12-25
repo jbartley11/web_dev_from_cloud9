@@ -1,0 +1,41 @@
+intro to apis
+map, weather data
+link to apis to save yourself time
+interface that allows code and computers to talk to each other
+use facebook login
+
+web api deal with web interface, information is requested and delivered
+via http
+
+IFTTT - if this then that
+connects apis together, string them together
+instagram post goes to other social media sites
+
+programmableweb.com 
+lists apis 
+
+json/xml
+
+xml - extended markup language
+<person> 
+    <age>22</age>
+    <name>jim</name>
+</person>
+
+json
+need quotes on keys
+{"person": {
+    "age": 21,
+    "name": "jim"}
+}
+
+jsonview chrome extension
+
+how to make http request through code
+request package in node
+curl - use in command line
+
+how to handle json reponse
+body is returned as string
+type of body to test datatype
+
