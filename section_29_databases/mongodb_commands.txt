@@ -1,0 +1,10 @@
+starting
+mongod --dbpath=data --nojournal
+
+stopping
+in mongo shell:
+use admin
+db.shutdownServer()
+
+in running terminal
+ctrl+c

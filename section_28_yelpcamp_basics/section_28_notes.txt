@@ -1,0 +1,22 @@
+yelpcamp start
+mkdir v1
+npm init
+
+homepage
+campgrounds page, name and image of campgrounds
+
+hardcode data when building
+
+build routes
+add in templates
+views/partials
+partials for header and footer
+
+adding bootstrap
+from cdn
+
+// submit new campground
+post route
+body-parser
+setup route to show form
+add unstyled form
