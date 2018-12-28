@@ -1,0 +1,23 @@
+npm install mongoose --save
+
+avoiding mongoose issues
+install at specific version
+npm install --save mongoose@5.3.15
+npm uninstall mongoose
+use ; to separate shell commands
+
+restful route pattern
+name    url         method      description
+---------------------------------------------
+index   /dogs       GET         display list of all dogs
+new     /dogs/new   GET         displays form to make new dog
+create  /dogs       POST        add new dog to db
+SHOW    /shows/:id  GET         show info about one dog
+
+
+ensure proper order when creating routes
+campgrounds/new
+campgrounds/:id
+
+delete everything in a collection
+db.collection.drop()
