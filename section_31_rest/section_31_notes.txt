@@ -1,0 +1,53 @@
+REST - Respresentational State Transfer
+a pattern for defining our routes
+map http and CRUD
+Predictable
+
+CREATE READ UPDATE DESTROY
+
+7 Different Route Types
+
+BLOG
+
+name    url             method      description
+---------------------------------------------
+index   /dogs           GET         display list of all dogs
+new     /dogs/new       GET         displays form to make new dog
+create  /dogs           POST        add new dog to db
+SHOW    /dogs/:id       GET         show info about one dog
+EDIT    /dogs/:id/edit  GET         show edit form for one dog
+UPDATE  /dogs/:id       PUT         update one dog then redirect
+DESTROY /dogs/:id       DELETE      delete one dog then redirect
+
+semantic ui css framework
+
+/blogs - index route
+/blogs/new - new blog route
+/blogs - post create
+/blogs/:id - show page for one blog
+/blogs/:id/edit - edit one blog
+
+passing name attribute using a different format when using body-parser
+<input type="text" name="blog[title]">
+in express it would be referenced by req.body.blog.title
+when you create a new object you can then just pass req.body.blog instead of creating object
+
+<%- %>
+use this will evaluate into code
+allows you to embed html tags
+allows user to run javascript
+can prevent use of script tags
+
+.subString(0,100)
+return only first 100 characters
+
+moment js - use to convert date to string
+
+put requests are not yet supported with html 
+put currently returns as get
+workaround using package method-override
+
+practice 7 routes
+
+sanitizer - remove anything malicious
+
