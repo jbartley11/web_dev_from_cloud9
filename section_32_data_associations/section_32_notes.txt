@@ -1,0 +1,26 @@
+http://web.archive.org/web/20161022164155/https://www.youtube.com/watch?v=yvviEA1pOXw
+
+
+associations allow relationships between collections
+user - post - photos - albums - comments - tags - likes
+
+different types of associations
+1:1
+1:M
+M:M
+
+Embedded Data
+one to many
+User and Posts
+
+embed vs references
+how to choose, depends?
+
+Module.exports
+in references.js
+move post and user schemas into separate files
+then reference them in main file
+helps us clean up our code and modular
+can use code elsewhere
+place in models folder
+models/post.js

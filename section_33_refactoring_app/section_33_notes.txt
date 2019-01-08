@@ -1,0 +1,29 @@
+refactoring steps
+create models directory
+use module.exports
+require models
+
+seeding the database
+clear out all of the data then add in data through seeds.js
+
+create seeds.js file with function
+load seeds file into index/app
+run at beginning to reset database
+
+when stringing together a remove and creates you must use callbacks to ensure proper order
+
+comments
+nested routes
+/campgrounds/:id/comments/new - get
+/campgrounds/:id/comments     - post
+
+naming templates
+new for campgrounds and comments
+need to create subfolders in the views folder to contain new 
+
+test connection with new files
+ex:
+main.css
+body {background: purple;}
+
+app.use(express.static(__dirname + "/public"));

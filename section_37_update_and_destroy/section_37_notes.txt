@@ -1,0 +1,24 @@
+new features
+
+flash message
+edit or delete campgrounds if user created it
+same with comments
+landing page
+
+editing campgrounds
+add method override
+edit route for campgrounds
+add link to edit pageadd update route
+fix $set problematic 
+
+editing campgrounds
+install method-override
+edit is get
+update is put
+
+require method override in index.js
+
+deleting
+destroy route
+add delete button
+- have to use a form to use delete route

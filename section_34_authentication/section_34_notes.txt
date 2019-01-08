@@ -1,0 +1,57 @@
+https://www.udemy.com/the-web-developer-bootcamp/learn/v4/questions/2367062
+
+authentication
+signup login logout
+complicated
+lot of different pieces
+
+tools that help - passport
+
+choice you have to make
+from scratch? or use existing tools?
+
+passportjs.org
+many strategies
+
+passport-local strategy
+username and password
+can add fb on top of local
+
+passport-local-mongoose
+made to work with mongoose
+
+sessions
+http is stateless
+requests are one time requests which have no idea of what you previously did
+sessions make http have state   
+little bit of information from user is passed along with request
+passport can then read information and determine if user is already logged information
+
+express-session 
+
+new app
+npm init
+npm install --save express mongoose body-parser passport ejs passport-local passport-local-mongoose express-session
+make index.js
+create models and views directories
+
+part 1
+set up folder structure
+install needed packages
+add root route and template
+add secret route and template
+
+part 2
+create user model
+configure passport
+
+part 3
+add register routes
+add register form
+
+part 4
+add in login routes and form
+
+part 5
+add logout
+add isLoggedIn middleware

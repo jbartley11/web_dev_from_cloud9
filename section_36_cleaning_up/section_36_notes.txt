@@ -1,0 +1,69 @@
+refactoring routes in index.js
+auth, comments, campgrounds - groups
+split out into separate files and then require them in index.js
+
+make new directory routes in project root
+create js files for campgrounds, comments, index(for routes not related to model)
+c9 on directory will open up all files in folder
+
+use express router
+in separate files
+require express
+var router = express.Router();
+replace all app. with route.
+have to export at end of file:
+module.exports = router;
+
+in index.js:
+var indexRoutes = require("./routes/index");
+app.use(indexRoutes); // do near bottom
+
+can add beginning of url in the app.use method since all routes within separated files
+all share the common beginning. campground/:id, campgrounds, campground/
+app.use("/campgrounds/", commentRoutes);
+in campgrounds file - /campgrounds changes to just /
+
+when including a param it doesn't come through unless you do
+in comments.js
+var router = express.Router({mergeParams: true});
+
+
+user associations comment
+remove name on form and have it come from username
+comment schema
+author: {
+    id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    },
+    username: String
+}
+
+in create comment route(post):
+comment.author.username = req.user.username;
+comment.author.id = req.user._id;
+comment.save();
+
+in seed, comment out everything after removing campgrounds
+run to remove everything
+then uncomment in seeds.js
+but then comment the function call out of index.js
+
+users and campgrounds
+user must be signed in to submit a new campground
+save username and id to new campground
+
+in campgrounds route
+don't want user to see new campground form or be able to post new campground
+use isLoggedIn middleware in campground routes we want to protect
+
+adding author info to campground
+in campgrounds model
+add author object
+in campgrounds route
+in post route
+campground.author.username = req.user.username;
+campground.author.id = req.user._id;
+campground.save();
+
+update campground show.ejs to display username on site

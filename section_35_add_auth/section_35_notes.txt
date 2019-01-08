@@ -1,0 +1,62 @@
+adding auth to yelpcamp
+install needed packages passport passport-local passport-local-mongoose express-session
+import packages
+
+add user model
+user.js
+require mongoose and passport local mongoose
+create schema with username and password
+userSchema.plugin(passportLocalMongoose);
+export user
+
+register
+configure passport
+app.use(require("express-session")({
+    secret: "kingking",
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new localStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+add register and login routes
+create register get
+create register template and render it in routes
+create register post
+test with res.send
+
+LOGIN
+add login routes and template with form
+
+LOGOUT/NAVBAR
+if user is not signed in they should see only login and signup
+if they are signed in they should only see logout
+
+logout route
+app.get("/logout", function(req, res) {
+    req.logout();
+    res.redirect("/campgrounds");
+}
+add logout route 
+
+prevent user from adding comment if not signed in
+need to use middleware in comments post and comment/new
+isLoggedIn Middleware
+
+add links to navbar
+
+show/hide auth links correctly
+use currentUser: req.user to pass into res.render
+
+to add object to all routes:
+app.use(function(req, res, next){
+    res.locals.currentUser = req.user;
+    next();
+});
+
+
+be aware of different path needs for partials in nested routes versus root routes
